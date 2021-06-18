@@ -2,8 +2,8 @@ import kotlin.math.roundToInt
 
 fun main() {
     var cardType = "Maestro"
-    var sumOfTransactions = 80000.0
-    var currentTransaction = 1009.0
+    var sumOfTransactions = 80000.0 //в руб
+    var currentTransaction = 1009.0 //в руб
 
     if(cardType=="Vk Pay" && currentTransaction<35) {
         println("Сумма должна быть больше 35 руб")
@@ -13,7 +13,7 @@ fun main() {
         print("Вы превысили лимит по переводам")
     }else{
         var result = Math.round(transactions(cardType, sumOfTransactions, currentTransaction)*100.0)
-        println("Комиссия: $result коп")
+        println("Комиссия: $result коп.") //в коп
     }
 }
 
