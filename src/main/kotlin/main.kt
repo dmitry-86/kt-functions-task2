@@ -8,9 +8,9 @@ fun main() {
     if(cardType=="Vk Pay" && currentTransaction<35) {
         println("Сумма должна быть больше 35 руб")
     }else if (cardType=="Vk Pay" && (currentTransaction>15000 || sumOfTransactions>40000)) {
-        print("вы превысили лимит по переводам")
+        print("Вы превысили лимит по переводам")
     }else if(currentTransaction>150000 || sumOfTransactions>600000){
-        print("вы превысили лимит по переводам")
+        print("Вы превысили лимит по переводам")
     }else{
         var result = Math.round(transactions(cardType, sumOfTransactions, currentTransaction)*100.0)
         println("Комиссия: $result коп")
@@ -22,7 +22,7 @@ fun transactions(cardType: String = "Vk Pay", sumOfTransactions: Double = 0.0, c
     when (cardType) {
         "Mastercard", "Maestro" -> commission = if (sumOfTransactions > 300 && sumOfTransactions < 75000) 0.0 else (currentTransaction * 0.006 + 20)
         "Visa", "Мир" -> commission = currentTransaction * 0.0075
-        "Vk Pay" -> commission =  0.0
+        "Vk Pay" -> commission = 0.0
     }
     return commission
 }
