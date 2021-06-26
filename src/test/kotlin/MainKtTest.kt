@@ -31,7 +31,7 @@ class MainKtTest {
             sumOfTransactions = sumOfTransactions,
             currentTransaction = currentTransaction)
 
-        assertEquals("Комиссия: 0 коп.", massage)
+        assertEquals("Комиссия: 300 коп.", massage)
     }
 
     @Test
